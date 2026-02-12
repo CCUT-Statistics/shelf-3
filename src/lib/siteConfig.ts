@@ -1,0 +1,91 @@
+export interface ProjectItem {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  owner: string;
+  status: "展示中" | "筹备中" | "预留";
+  visible: boolean;
+}
+
+export interface DisplayConfig {
+  showHero: boolean;
+  showFeatures: boolean;
+  showProjects: boolean;
+  showPartners: boolean;
+  showContact: boolean;
+}
+
+export interface SiteConfig {
+  display: DisplayConfig;
+  projects: ProjectItem[];
+}
+
+export interface CollaboratorSchoolGroup {
+  school: string;
+  colleges: string[];
+}
+
+export const defaultSiteConfig: SiteConfig = {
+  display: {
+    showHero: true,
+    showFeatures: true,
+    showProjects: true,
+    showPartners: true,
+    showContact: true,
+  },
+  projects: [
+    {
+      id: "project-1",
+      name: "数权驱动·绿链焕新",
+      description:
+        "动力电池回收供应链金融创新服务平台，聚焦数据确权、风险建模与绿色金融服务联动。",
+      category: "生态文明建设与绿色低碳发展",
+      owner: "危士豪",
+      status: "展示中",
+      visible: true,
+    },
+    {
+      id: "project-2",
+      name: "红色内容安全与指挥舱",
+      description:
+        "面向校史馆与教育场景，建设内容审校流、数据驾驶舱与讲解互动能力，支持可视化复盘。",
+      category: "教育数字化与内容安全",
+      owner: "项目组联合推进",
+      status: "展示中",
+      visible: true,
+    },
+    {
+      id: "reserved-1",
+      name: "预留项目空位 A",
+      description: "用于后续新增项目，可在管理面板中直接改名并发布展示。",
+      category: "待定",
+      owner: "待分配",
+      status: "预留",
+      visible: true,
+    },
+    {
+      id: "reserved-2",
+      name: "预留项目空位 B",
+      description: "用于后续新增项目，可在管理面板中直接改名并发布展示。",
+      category: "待定",
+      owner: "待分配",
+      status: "预留",
+      visible: true,
+    },
+  ],
+};
+
+export const collaboratorSchoolGroups: CollaboratorSchoolGroup[] = [
+  { school: "郑州大学", colleges: ["物理学院"] },
+  { school: "长春工业大学", colleges: ["数学与统计学院", "计算机学院", "经济管理学院"] },
+  { school: "吉林大学", colleges: [] },
+  { school: "东北电力大学", colleges: [] },
+  { school: "吉林农业大学", colleges: [] },
+  { school: "东北师范大学", colleges: [] },
+  { school: "上海第二工业大学", colleges: [] },
+  { school: "华东师范大学", colleges: [] },
+  { school: "江南大学", colleges: [] },
+  { school: "山东理工大学", colleges: [] },
+  { school: "延边大学", colleges: [] },
+];
