@@ -12,7 +12,7 @@ export function ProjectsSection({ projects }: { projects: ProjectItem[] }) {
       <div className="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/70 lg:p-10">
         <p className="text-sm font-semibold tracking-widest text-blue-600">PROJECT DASHBOARD</p>
         <h2 className="mt-2 text-3xl font-bold text-slate-900 lg:text-4xl">项目看板</h2>
-        <p className="mt-3 text-slate-600">仅保留项目看板模块，支持动态配置项目展示状态与内容。</p>
+        <p className="mt-3 text-slate-600">项目看板模块，支持动态配置项目展示状态与内容。</p>
 
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           {projects.filter((item) => item.visible).map((project) => (
