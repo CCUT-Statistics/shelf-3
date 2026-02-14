@@ -16,7 +16,7 @@ export const Navbar = () => {
         <Link href="/">
           <span className="flex items-center space-x-2 text-2xl font-semibold text-blue-600 dark:text-gray-100">
             <Image src="/img/logo.svg" width="32" alt="项目看板 Logo" height="32" className="w-8" />
-            <span>智澜项目看板</span>
+            <span>项目看板</span>
           </span>
         </Link>
 
