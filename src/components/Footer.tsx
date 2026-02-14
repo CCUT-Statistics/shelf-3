@@ -1,45 +1,45 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/Container";
 
 export function Footer() {
   return (
-    <div className="relative">
+    <footer className="bg-[#0f172a] text-white">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-4">
+        <div className="mx-auto mt-0 grid max-w-screen-xl grid-cols-1 gap-10 border-t border-slate-700 pt-12 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-sky-600 dark:text-gray-100">
-              <Image src="/img/logo.svg" alt="智澜科技" width="32" height="32" className="w-8" />
-              <span>智澜科技</span>
+            <Link href="/" className="text-2xl font-semibold text-cyan-300">
+              智澜项目看板
             </Link>
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              为企业提供可落地、可迭代、可衡量的官网增长方案，帮助品牌把流量转化为真实商机。
+            <div className="mt-4 max-w-md text-slate-300">聚焦项目成果展示，保留项目看板与合作院校墙，信息更直达。</div>
+          </div>
+
+          <div>
+            <div className="font-semibold text-white">页面导航</div>
+            <div className="-ml-3 mt-2 flex w-full flex-wrap lg:ml-0">
+              <Link href="#projects" className="w-full rounded-md px-4 py-2 text-slate-300 hover:text-cyan-300">
+                项目看板
+              </Link>
+              <Link href="#collaborators" className="w-full rounded-md px-4 py-2 text-slate-300 hover:text-cyan-300">
+                合作院校
+              </Link>
             </div>
           </div>
 
           <div>
-            <div className="font-semibold">快速导航</div>
-            <div className="flex flex-wrap w-full mt-2 -ml-3 lg:ml-0">
-              <Link href="#features" className="w-full px-4 py-2 text-gray-500 rounded-md hover:text-sky-500">产品能力</Link>
-              <Link href="#cases" className="w-full px-4 py-2 text-gray-500 rounded-md hover:text-sky-500">客户案例</Link>
-              <Link href="#contact" className="w-full px-4 py-2 text-gray-500 rounded-md hover:text-sky-500">联系我们</Link>
-            </div>
-          </div>
-
-          <div>
-            <div className="font-semibold">法律与社媒</div>
-            <div className="flex flex-wrap w-full mt-2 -ml-3 lg:ml-0">
-              <Link href="/privacy" className="w-full px-4 py-2 text-gray-500 rounded-md hover:text-sky-500">隐私政策</Link>
-              <Link href="/terms" className="w-full px-4 py-2 text-gray-500 rounded-md hover:text-sky-500">服务条款</Link>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener" className="w-full px-4 py-2 text-gray-500 rounded-md hover:text-sky-500">LinkedIn</a>
+            <div className="font-semibold text-white">支持</div>
+            <div className="-ml-3 mt-2 flex w-full flex-wrap lg:ml-0">
+              <Link href="/privacy" className="w-full rounded-md px-4 py-2 text-slate-300 hover:text-cyan-300">
+                隐私政策
+              </Link>
+              <Link href="/terms" className="w-full rounded-md px-4 py-2 text-slate-300 hover:text-cyan-300">
+                服务条款
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()} 智澜科技（Zhilan Tech）. All rights reserved.
-        </div>
+        <div className="my-10 text-center text-sm text-slate-400">Copyright © {new Date().getFullYear()} 智澜项目看板.</div>
       </Container>
-    </div>
+    </footer>
   );
 }
