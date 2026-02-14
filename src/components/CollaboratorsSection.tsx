@@ -12,7 +12,7 @@ export function CollaboratorsSection() {
     <section id="collaborators" className="mt-14 border-y border-slate-300/70 bg-[#e9edf3] py-12">
       <div className="container mx-auto px-6">
         <h2 className="text-center text-3xl font-bold text-slate-900 lg:text-4xl">合作院校</h2>
-        <p className="mt-3 text-center text-slate-600">样式参考院校 Logo 墙：浅灰底 + 白色圆角卡片矩阵。</p>
+        <p className="mt-3 text-center text-slate-600">院校 Logo 墙：</p>
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
           {collaboratorSchoolGroups.map((group, index) => (
