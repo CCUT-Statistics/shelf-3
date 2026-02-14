@@ -28,11 +28,11 @@ export function LandingContent() {
         <div className="absolute -top-36 left-1/2 h-[360px] w-[760px] -translate-x-1/2 rounded-full bg-white/20 blur-3xl" />
         <div className="container relative mx-auto px-6 text-center">
           <p className="inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-sm">
-            123Pan × 木函风格 · 项目展示版
+            比奇社区 · 项目展示版
           </p>
           <h1 className="mt-6 text-4xl font-bold leading-tight lg:text-6xl">新能源 & 思政红旅项目看板</h1>
           <p className="mx-auto mt-5 max-w-3xl text-base text-blue-100 lg:text-lg">
-            仅保留核心项目展示能力，聚焦项目进度、负责人、类别与合作院校信息，页面结构更直接，便于路演与成果展示。
+            项目进度、负责人、类别与合作院校信息。
           </p>
           <a
             href="#projects"
