@@ -5,28 +5,26 @@ import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
 const navigation = [
-  { name: "产品能力", href: "#features" },
   { name: "项目看板", href: "#projects" },
   { name: "合作院校", href: "#collaborators" },
-  { name: "联系我们", href: "#contact" },
 ];
 
 export const Navbar = () => {
   return (
-    <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
+    <div className="w-full border-b border-slate-200/70 bg-white/85 backdrop-blur dark:bg-trueGray-900/90">
+      <nav className="container relative mx-auto flex flex-wrap items-center justify-between p-6 lg:justify-between xl:px-1">
         <Link href="/">
-          <span className="flex items-center space-x-2 text-2xl font-medium text-sky-600 dark:text-gray-100">
-            <Image src="/img/logo.svg" width="32" alt="智澜科技 Logo" height="32" className="w-8" />
-            <span>智澜科技</span>
+          <span className="flex items-center space-x-2 text-2xl font-semibold text-blue-600 dark:text-gray-100">
+            <Image src="/img/logo.svg" width="32" alt="项目看板 Logo" height="32" className="w-8" />
+            <span>智澜项目看板</span>
           </span>
         </Link>
 
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
+        <div className="nav__item ml-auto mr-2 flex gap-3 lg:order-2 lg:ml-0">
           <ThemeChanger />
-          <div className="hidden mr-3 lg:flex nav__item">
-            <Link href="#contact" className="px-6 py-2 text-white bg-sky-600 rounded-md md:ml-5">
-              免费咨询
+          <div className="nav__item mr-3 hidden lg:flex">
+            <Link href="#projects" className="rounded-md bg-blue-600 px-6 py-2 text-white md:ml-5">
+              查看项目
             </Link>
           </div>
         </div>
@@ -34,8 +32,8 @@ export const Navbar = () => {
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button aria-label="Toggle Menu" className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-sky-500 focus:text-sky-500 focus:bg-sky-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700">
-                <svg className="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <Disclosure.Button aria-label="Toggle Menu" className="rounded-md px-2 py-1 text-gray-500 hover:text-blue-500 focus:bg-blue-100 focus:text-blue-500 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700 lg:hidden">
+                <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   {open ? (
                     <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
                   ) : (
@@ -44,14 +42,14 @@ export const Navbar = () => {
                 </svg>
               </Disclosure.Button>
 
-              <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+              <Disclosure.Panel className="my-5 flex w-full flex-wrap lg:hidden">
                 {navigation.map((item) => (
-                  <Link key={item.name} href={item.href} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-sky-500 focus:text-sky-500 focus:bg-sky-100 dark:focus:bg-gray-800 focus:outline-none">
+                  <Link key={item.name} href={item.href} className="-ml-4 w-full rounded-md px-4 py-2 text-gray-500 hover:text-blue-500 focus:bg-blue-100 focus:text-blue-500 focus:outline-none dark:text-gray-300 dark:focus:bg-gray-800">
                     {item.name}
                   </Link>
                 ))}
-                <Link href="#contact" className="w-full px-6 py-2 mt-3 text-center text-white bg-sky-600 rounded-md lg:ml-5">
-                  免费咨询
+                <Link href="#projects" className="mt-3 w-full rounded-md bg-blue-600 px-6 py-2 text-center text-white lg:ml-5">
+                  查看项目
                 </Link>
               </Disclosure.Panel>
             </>
@@ -59,10 +57,10 @@ export const Navbar = () => {
         </Disclosure>
 
         <div className="hidden text-center lg:flex lg:items-center">
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
+          <ul className="list-none items-center justify-end pt-6 lg:flex lg:pt-0">
             {navigation.map((menu) => (
-              <li className="mr-3 nav__item" key={menu.name}>
-                <Link href={menu.href} className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-sky-500 focus:text-sky-500 focus:bg-sky-100 focus:outline-none dark:focus:bg-gray-800">
+              <li className="nav__item mr-3" key={menu.name}>
+                <Link href={menu.href} className="inline-block rounded-md px-4 py-2 text-lg font-normal text-gray-800 no-underline hover:text-blue-500 focus:bg-blue-100 focus:text-blue-500 focus:outline-none dark:text-gray-200 dark:focus:bg-gray-800">
                   {menu.name}
                 </Link>
               </li>

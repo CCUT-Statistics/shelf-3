@@ -10,15 +10,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
-  title: "智澜科技 | 企业官网增长解决方案",
-  description: "智澜科技为 B2B 企业提供官网策划、设计与开发服务，帮助品牌提升线索转化与销售效率。",
-  keywords: ["企业官网", "官网改版", "B2B 增长", "Next.js Landing"],
+  title: "智澜项目看板 | 新能源与思政红旅",
+  description: "聚焦新能源与思政红旅项目展示，保留项目看板与合作院校墙。",
+  keywords: ["项目看板", "新能源", "思政红旅", "合作院校"],
   openGraph: {
-    title: "智澜科技 | 企业官网增长解决方案",
-    description: "从官网内容结构到线索转化链路，2~4 周交付可上线版本。",
+    title: "智澜项目看板 | 新能源与思政红旅",
+    description: "采用 123Pan 与木函风格的简洁视觉，突出项目与合作院校展示。",
     url: "https://example.com",
-    siteName: "智澜科技",
-    images: [{ url: "/img/hero.svg", width: 1200, height: 630, alt: "智澜科技官网预览" }],
+    siteName: "智澜项目看板",
+    images: [{ url: "/img/hero.svg", width: 1200, height: 630, alt: "智澜项目看板预览" }],
     locale: "zh_CN",
     type: "website",
   },

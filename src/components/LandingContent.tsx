@@ -1,14 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Hero } from "@/components/Hero";
-import { SectionTitle } from "@/components/SectionTitle";
-import { Benefits } from "@/components/Benefits";
-import { Cta } from "@/components/Cta";
-import { ContactForm } from "@/components/ContactForm";
-import { benefitOne, benefitTwo } from "@/components/data";
-import { CollaboratorsSection } from "@/components/CollaboratorsSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
+import { CollaboratorsSection } from "@/components/CollaboratorsSection";
 import { defaultSiteConfig, type SiteConfig } from "@/lib/siteConfig";
 
 export function LandingContent() {
@@ -29,27 +23,28 @@ export function LandingContent() {
   }, []);
 
   return (
-    <>
-      {config.display.showHero && <Hero />}
-
-      {config.display.showFeatures && (
-        <div id="features">
-          <SectionTitle preTitle="核心卖点" title="一站式企业官网落地能力">
-            我们帮助企业在 2~4 周内完成官网升级：从品牌表达、内容结构到线索转化链路，兼顾设计质感与业务结果。
-          </SectionTitle>
-          <Benefits data={benefitOne} />
-          <Benefits imgPos="right" data={benefitTwo} />
+    <main className="bg-[#f3f6fb] pb-16 text-slate-900">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#0f5fe8] via-[#1975ff] to-[#3a8bff] pb-16 pt-16 text-white">
+        <div className="absolute -top-36 left-1/2 h-[360px] w-[760px] -translate-x-1/2 rounded-full bg-white/20 blur-3xl" />
+        <div className="container relative mx-auto px-6 text-center">
+          <p className="inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-1 text-sm">
+            123Pan × 木函风格 · 项目展示版
+          </p>
+          <h1 className="mt-6 text-4xl font-bold leading-tight lg:text-6xl">新能源 & 思政红旅项目看板</h1>
+          <p className="mx-auto mt-5 max-w-3xl text-base text-blue-100 lg:text-lg">
+            仅保留核心项目展示能力，聚焦项目进度、负责人、类别与合作院校信息，页面结构更直接，便于路演与成果展示。
+          </p>
+          <a
+            href="#projects"
+            className="mt-8 inline-flex rounded-xl bg-white px-6 py-3 font-semibold text-[#0f5fe8] shadow-lg shadow-blue-900/30 transition hover:-translate-y-0.5"
+          >
+            查看项目看板
+          </a>
         </div>
-      )}
+      </section>
 
-      {config.display.showProjects && <ProjectsSection projects={config.projects} />}
-
-      {config.display.showPartners && <CollaboratorsSection />}
-
-      <Cta />
-
-      {config.display.showContact && <ContactForm />}
-
-    </>
+      <ProjectsSection projects={config.projects} />
+      <CollaboratorsSection />
+    </main>
   );
 }
